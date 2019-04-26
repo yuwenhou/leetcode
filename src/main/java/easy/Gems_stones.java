@@ -7,6 +7,23 @@ package easy;
  字母区分大小写，因此"a"和"A"是不同类型的石头。
  */
 public class Gems_stones {
+    public static void main(String[] args) {
+        String J = "aA";
+
+        String S = "aAAbbbb";
+
+        numJewelsInStones(J,S);
+
+
+    }
+
+
+    public static int numJewelsInStones(String J, String S) {
+
+
+        return 0;
+    }
+
 
 
 
