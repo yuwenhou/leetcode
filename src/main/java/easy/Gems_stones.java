@@ -8,22 +8,43 @@ package easy;
  */
 public class Gems_stones {
     public static void main(String[] args) {
-        String J = "aA";
-
-        String S = "aAAbbbb";
-
-        numJewelsInStones(J,S);
-
+        String J = "z";
+        String S = "ZZ";
+        //方法1：split 遍历
+        System.out.println("gem数量"+numJewelsInStones1(J,S));
+        //方法2：toCharArray 将字符串转成字符数组
+        System.out.println("使用toCharArray进行转换"+numJewelsInStones1(J,S));
 
     }
 
 
-    public static int numJewelsInStones(String J, String S) {
-
-
-        return 0;
+    public static int numJewelsInStones1(String J, String S) {
+        int count = 0;
+        String[] gem  = J.split("");
+        String[] stone  = S.split("");
+        for(int i=0;i<gem.length;i++){
+            for (int j=0;j<stone.length;j++){
+                if(gem[i].equals(stone[j])){
+                    count = count +1;
+                }
+            }
+        }
+        return count;
     }
 
+    public static int numJewelsInStones2(String J, String S) {
+        int count = 0;
+        char[] gem = J.toCharArray();//将字符串转成字符数组
+        char[] stone = S.toCharArray();
+        for(int i=0;i<gem.length;i++){
+            for (int j=0;j<stone.length;j++){
+                if(gem[i]== stone[j]){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
 
 
 
