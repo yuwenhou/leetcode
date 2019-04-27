@@ -1,5 +1,3 @@
-package easy;
-
 import java.util.HashMap;
 
 /**
