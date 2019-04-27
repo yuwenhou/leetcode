@@ -17,7 +17,6 @@ public class Gems_stones {
 
     }
 
-
     public static int numJewelsInStones1(String J, String S) {
         int count = 0;
         String[] gem  = J.split("");
